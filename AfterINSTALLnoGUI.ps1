@@ -49,33 +49,33 @@ if ( Test-Path C:\ProgramData\chocolatey\choco.exe ) {
 }
 
 
-winget install --accept-source-agreements --accept-package-agreements --skip-installed 7zip.7zip | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed AdGuard.AdGuard | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Audacity.Audacity | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Discord.Discord | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed FlorianHoech.DisplayCAL | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Google.Chrome | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Implbits.HashTab | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed DominikReichl.KeePass | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed CodecGuide.K-LiteCodecPack.Full | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Logitech.GHUB | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed MediaArea.MediaInfo.GUI | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Notepad++.Notepad++ | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed OBSProject.OBSStudio | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed PuTTY.PuTTY | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed JonasJohn.RemoveEmptyDirectories | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Samsung.DeX | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed AntoineAflalo.SoundSwitch | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed SyncTrayzor.SyncTrayzor | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed TeamSpeakSystems.TeamSpeakClient | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed TeamViewer.TeamViewer | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Ghisler.TotalCommander | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed VideoLAN.VLC | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed WinSCP.WinSCP | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Rils.TouchPortal | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Corsair.iCUE.4 | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed ShareX.ShareX | Out-Host
-winget install --accept-source-agreements --accept-package-agreements --skip-installed Oracle.VirtualBox | Out-Host
+winget install --accept-source-agreements --accept-package-agreements 7zip.7zip | Out-Host
+winget install --accept-source-agreements --accept-package-agreements AdGuard.AdGuard | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Audacity.Audacity | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Discord.Discord | Out-Host
+winget install --accept-source-agreements --accept-package-agreements FlorianHoech.DisplayCAL | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Google.Chrome | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Implbits.HashTab | Out-Host
+winget install --accept-source-agreements --accept-package-agreements DominikReichl.KeePass | Out-Host
+winget install --accept-source-agreements --accept-package-agreements CodecGuide.K-LiteCodecPack.Full | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Logitech.GHUB | Out-Host
+winget install --accept-source-agreements --accept-package-agreements MediaArea.MediaInfo.GUI | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Notepad++.Notepad++ | Out-Host
+winget install --accept-source-agreements --accept-package-agreements OBSProject.OBSStudio | Out-Host
+winget install --accept-source-agreements --accept-package-agreements PuTTY.PuTTY | Out-Host
+winget install --accept-source-agreements --accept-package-agreements JonasJohn.RemoveEmptyDirectories | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Samsung.DeX | Out-Host
+winget install --accept-source-agreements --accept-package-agreements AntoineAflalo.SoundSwitch | Out-Host
+winget install --accept-source-agreements --accept-package-agreements SyncTrayzor.SyncTrayzor | Out-Host
+winget install --accept-source-agreements --accept-package-agreements TeamSpeakSystems.TeamSpeakClient | Out-Host
+winget install --accept-source-agreements --accept-package-agreements TeamViewer.TeamViewer | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Ghisler.TotalCommander | Out-Host
+winget install --accept-source-agreements --accept-package-agreements VideoLAN.VLC | Out-Host
+winget install --accept-source-agreements --accept-package-agreements WinSCP.WinSCP | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Rils.TouchPortal | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Corsair.iCUE.4 | Out-Host
+winget install --accept-source-agreements --accept-package-agreements ShareX.ShareX | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Oracle.VirtualBox | Out-Host
 choco install msiafterburner --accept-license --confirm | Out-Host
 choco install adobe-creative-cloud --accept-license --confirm | Out-Host # --ignore-checksums
 choco install spotify --accept-license --confirm | Out-Host
