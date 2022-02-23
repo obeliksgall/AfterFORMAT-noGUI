@@ -13,7 +13,10 @@ if ( (Test-Admin) -eq $false ) {
     exit
 }
 
-'Script running with full privileges'
+'0.0.5`nScript running with full privileges'
+
+$ExecutionPolicy = Get-ExecutionPolicy
+Set-ExecutionPolicy Unrestricted
 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device" -Name "DevicePasswordLessBuildVersion" -Value 0
 'Auto log in enable. Go to netplwiz`n'
@@ -39,12 +42,9 @@ if ( Test-Path C:\ProgramData\chocolatey\choco.exe ) {
 } else {
     'Chocolatey not found, installing it now'
     $URLchocolatey = "https://community.chocolatey.org/install.ps1"
-    $ExecutionPolicy = Get-ExecutionPolicy
-    Set-ExecutionPolicy Unrestricted
     New-Item -Path 'C:\' -Name 'Chocolatey_InstallScript.ps1' -ItemType File -Value $URLchocolatey.Content -Force
 	& 'C:\Chocolatey_InstallScript.ps1'
 	'Chocolatey Installed`n'
-    Set-ExecutionPolicy $ExecutionPolicy
 }
 
 
@@ -55,6 +55,8 @@ if ( Test-Path C:\ProgramData\chocolatey\choco.exe ) {
 
 
 
+
+Set-ExecutionPolicy $ExecutionPolicy
 
 Write-Host -NoNewLine 'Press any key to continue...';
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
