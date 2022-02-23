@@ -16,11 +16,11 @@ if ( (Test-Admin) -eq $false ) {
 'Script running with full privileges'
 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device" -Name "DevicePasswordLessBuildVersion" -Value 0
-'Auto log in enable. Go to netplwiz'
+'Auto log in enable. Go to netplwiz`n'
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin" -Value 0 #OR 5
-'Change UAC settings to 0'
+'Change UAC settings to 0`n'
 cmd.exe /c 'powercfg.exe /hibernate off'
-'Hibernate off'
+'Hibernate off`n'
 
 'Checking Winget...'
 if ( Test-Path ~\AppData\Local\Microsoft\WindowsApps\winget.exe ) {
@@ -30,7 +30,7 @@ if ( Test-Path ~\AppData\Local\Microsoft\WindowsApps\winget.exe ) {
 	Start-Process "ms-appinstaller:?source=https://aka.ms/getwinget"
 	$nid = (Get-Process AppInstaller).Id
 	Wait-Process -Id $nid
-	Write-Host Winget Installed
+	'Winget Installed`n'
 }
 
 'Checking Chocolatey...'
@@ -38,12 +38,12 @@ if ( Test-Path C:\ProgramData\chocolatey\choco.exe ) {
     'Chocolatey Already Installed'
 } else {
     'Chocolatey not found, installing it now'
-    $URLchocolatey = https://community.chocolatey.org/install.ps1
+    $URLchocolatey = "https://community.chocolatey.org/install.ps1"
     $ExecutionPolicy = Get-ExecutionPolicy
     Set-ExecutionPolicy Unrestricted
     New-Item -Path 'C:\' -Name 'Chocolatey_InstallScript.ps1' -ItemType File -Value $URLchocolatey.Content -Force
 	& 'C:\Chocolatey_InstallScript.ps1'
-	Write-Host Chocolatey Installed
+	'Chocolatey Installed`n'
     Set-ExecutionPolicy $ExecutionPolicy
 }
 
