@@ -13,14 +13,14 @@ if ( (Test-Admin) -eq $false ) {
     exit
 }
 
-'0.0.5`nScript running with full privileges'
+'version 0.0.6`nScript running with full privileges'
 
 $ExecutionPolicy = Get-ExecutionPolicy
 Set-ExecutionPolicy Unrestricted
 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device" -Name "DevicePasswordLessBuildVersion" -Value 0
 'Auto log in enable. Go to netplwiz`n'
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin" -Value 0 #OR 5
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name ConsentPromptBehaviorAdmin -Value 0 #OR 5
 'Change UAC settings to 0`n'
 cmd.exe /c 'powercfg.exe /hibernate off'
 'Hibernate off`n'
