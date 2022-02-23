@@ -43,7 +43,7 @@ if ( Test-Path C:\ProgramData\chocolatey\choco.exe ) {
     Set-ExecutionPolicy Unrestricted
     New-Item -Path 'C:\' -Name 'Chocolatey_InstallScript.ps1' -ItemType File -Value $URLchocolatey.Content -Force
 	& 'C:\Chocolatey_InstallScript.ps1'
-	Write-Host Winget Installed
+	Write-Host Chocolatey Installed
     Set-ExecutionPolicy $ExecutionPolicy
 }
 
