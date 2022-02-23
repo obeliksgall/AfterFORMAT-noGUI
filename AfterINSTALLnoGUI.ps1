@@ -13,7 +13,7 @@ if ( (Test-Admin) -eq $false ) {
     exit
 }
 
-'version 0.0.7`n Script running with full privileges'
+'version 0.0.8`n Script running with full privileges'
 
 $ExecutionPolicy = Get-ExecutionPolicy
 Set-ExecutionPolicy Unrestricted
@@ -49,15 +49,43 @@ if ( Test-Path C:\ProgramData\chocolatey\choco.exe ) {
 }
 
 
+winget install --accept-source-agreements --accept-package-agreements 7zip.7zip | Out-Host
+winget install --accept-source-agreements --accept-package-agreements AdGuard.AdGuard | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Audacity.Audacity | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Discord.Discord | Out-Host
+winget install --accept-source-agreements --accept-package-agreements FlorianHoech.DisplayCAL | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Google.Chrome | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Implbits.HashTab | Out-Host
+winget install --accept-source-agreements --accept-package-agreements DominikReichl.KeePass | Out-Host
+winget install --accept-source-agreements --accept-package-agreements CodecGuide.K-LiteCodecPack.Full | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Logitech.GHUB | Out-Host
+winget install --accept-source-agreements --accept-package-agreements MediaArea.MediaInfo.GUI | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Notepad++.Notepad++ | Out-Host
+winget install --accept-source-agreements --accept-package-agreements OBSProject.OBSStudio | Out-Host
+winget install --accept-source-agreements --accept-package-agreements PuTTY.PuTTY | Out-Host
+winget install --accept-source-agreements --accept-package-agreements JonasJohn.RemoveEmptyDirectories | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Samsung.DeX | Out-Host
+winget install --accept-source-agreements --accept-package-agreements AntoineAflalo.SoundSwitch | Out-Host
+winget install --accept-source-agreements --accept-package-agreements SyncTrayzor.SyncTrayzor | Out-Host
+winget install --accept-source-agreements --accept-package-agreements TeamSpeakSystems.TeamSpeakClient | Out-Host
+winget install --accept-source-agreements --accept-package-agreements TeamViewer.TeamViewer | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Ghisler.TotalCommander | Out-Host
+winget install --accept-source-agreements --accept-package-agreements VideoLAN.VLC | Out-Host
+winget install --accept-source-agreements --accept-package-agreements WinSCP.WinSCP | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Rils.TouchPortal | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Corsair.iCUE.4 | Out-Host
+winget install --accept-source-agreements --accept-package-agreements ShareX.ShareX | Out-Host
+winget install --accept-source-agreements --accept-package-agreements Oracle.VirtualBox | Out-Host
+choco install msiafterburner --accept-license --confirm | Out-Host
+choco install adobe-creative-cloud --accept-license --confirm | Out-Host # --ignore-checksums
+choco install spotify --accept-license --confirm | Out-Host
 
 
-
-
-
-
-
+'Updating...'
+winget upgrade --all | Out-Host
+choco upgrade all | Out-Host
 
 Set-ExecutionPolicy $ExecutionPolicy
 
-Write-Host -NoNewLine 'Press any key to continue...';
+Write-Host -NoNewLine '`nPress any key to continue...';
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
